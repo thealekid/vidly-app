@@ -10,18 +10,18 @@ class Movies extends Component {
         pageSize: 4
     };
 
-    handleDelete = (movie) => {
-        const movies = this.state.movies.filter(m => m._id !== movie._id);
-        this.setState({movies})
-    };
+    // handleDelete = (movie) => {
+    //     const movies = this.state.movies.filter(m => m._id !== movie._id);
+    //     this.setState({movies})
+    // };
 
-    handleLike = (movie) => {
-        const movies = [...this.state.movies];
-        const index = movies.indexOf(movie);
-        movies[index] = {...movies[index]};
-        movies[index].liked = !movies[index].liked;
-        this.setState({ movies });
-    };
+    // handleLike = (movie) => {
+    //     const movies = [...this.state.movies];
+    //     const index = movies.indexOf(movie);
+    //     movies[index] = {...movies[index]};
+    //     movies[index].liked = !movies[index].liked;
+    //     this.setState({ movies });
+    // };
 
     handlePageChange = page => {
         this.setState({ currentPage: page})
