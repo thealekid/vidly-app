@@ -40,6 +40,10 @@ class Movies extends Component {
 
     handleGenreSelect = genre => {
         this.setState({ selectedGenre: genre, currentPage: 1})
+    };
+
+    handleSort = path => {
+
     }
 
     render() { 
@@ -65,7 +69,7 @@ class Movies extends Component {
             <div className="col">
             <p>Showing {filtered.length} movies in the database</p>
 
-            <MoviesTable movies />
+            <MoviesTable movies={movies} onLike={this.handleLike} onDelete={this.handleDelete} onSort={this.handleSort} />
         
         <Pagination itemsCount={filtered.length} pageSize={pageSize} currentPage={currentPage} onPageChange={this.handlePageChange}/>
             </div>
